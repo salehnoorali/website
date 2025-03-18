@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>احسان الیوت | آموزش تخصصی ترید</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dark-theme">
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>ورود به حساب کاربری</h2>
+            <form id="loginForm" class="auth-form">
+                <div class="form-group">
+                    <label for="loginEmail">ایمیل</label>
+                    <input type="email" id="loginEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">رمز عبور</label>
+                    <input type="password" id="loginPassword" required>
+                </div>
+                <button type="submit" class="submit-btn">ورود</button>
+                <p class="form-footer">حساب کاربری ندارید؟ <a href="#" id="showSignup">ثبت نام کنید</a></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div id="signupModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>ثبت نام</h2>
+            <form id="signupForm" class="auth-form">
+                <div class="form-group">
+                    <label for="signupName">نام و نام خانوادگی</label>
+                    <input type="text" id="signupName" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupEmail">ایمیل</label>
+                    <input type="email" id="signupEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupPassword">رمز عبور</label>
+                    <input type="password" id="signupPassword" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupConfirmPassword">تکرار رمز عبور</label>
+                    <input type="password" id="signupConfirmPassword" required>
+                </div>
+                <button type="submit" class="submit-btn">ثبت نام</button>
+                <p class="form-footer">حساب کاربری دارید؟ <a href="#" id="showLogin">وارد شوید</a></p>
+            </form>
+        </div>
+    </div>
+
+    <header class="main-header" style="background-image: url('https://example.com/trader-image.jpg'); background-size: cover; background-position: center;">
+        <nav class="nav-container">
+            <div class="logo">
+                <h1>احسان الیوت</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">خانه</a></li>
+                <li><a href="#courses">دوره‌های آموزشی</a></li>
+                <li><a href="#analysis">تحلیل‌ها</a></li>
+                <li><a href="#community">انجمن</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <button class="login-btn">ورود</button>
+                <button class="signup-btn">ثبت نام</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" class="hero-section">
+            <div class="hero-content">
+                <h2>به دنیای حرفه‌ای ترید خوش آمدید</h2>
+                <p>با احسان صادقی (احسان الیوت) مسیر موفقیت در بازارهای مالی را طی کنید</p>
+                <button class="cta-button">شروع یادگیری</button>
+            </div>
+        </section>
+
+        <section id="courses" class="courses-section">
+            <h2>دوره‌های آموزشی</h2>
+            <div class="course-grid">
+                <div class="course-card">
+                    <div class="course-image">
+                        <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=500" alt="دوره مقدماتی ترید">
+                    </div>
+                    <div class="course-content">
+                        <h3>دوره مقدماتی ترید</h3>
+                        <p>آشنایی با مفاهیم اولیه و اصول ترید در بازارهای مالی</p>
+                        <button class="course-btn">مشاهده دوره</button>
+                    </div>
+                </div>
+                <div class="course-card">
+                    <div class="course-image">
+                        <img src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=500" alt="تحلیل تکنیکال پیشرفته">
+                    </div>
+                    <div class="course-content">
+                        <h3>تحلیل تکنیکال پیشرفته</h3>
+                        <p>آموزش پیشرفته تحلیل نمودار و استراتژی‌های معاملاتی</p>
+                        <button class="course-btn">مشاهده دوره</button>
+                    </div>
+                </div>
+                <div class="course-card">
+                    <div class="course-image">
+                        <img src="https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=500" alt="مدیریت سرمایه">
+                    </div>
+                    <div class="course-content">
+                        <h3>مدیریت سرمایه</h3>
+                        <p>آموزش اصول مدیریت ریسک و سرمایه در معاملات</p>
+                        <button class="course-btn">مشاهده دوره</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="live-market" class="market-section">
+            <h2>بازار لحظه‌ای</h2>
+            <div class="market-widgets-container">
+                <div id="tradingview_widget1" class="trading-widget" style="height: 800px;"></div>
+                <div id="tradingview_widget2" class="trading-widget" style="height: 800px;"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>درباره ما</h3>
+                <p>احسان الیوت - متخصص و مدرس بازارهای مالی</p>
+            </div>
+            <div class="footer-section">
+                <h3>تماس با ما</h3>
+                <p>ایمیل: info@ehsaneliott.com</p>
+            </div>
+            <div class="footer-section">
+                <h3>شبکه‌های اجتماعی</h3>
+                <div class="social-links">
+                    <a href="https://instagram.com/ehsanelliott?igshid=NTR5dW81MXYxY3Y5" class="social-link">اینستاگرام</a>
+                    <a href="https://t.me/ehsanelliott" class="social-link">تلگرام</a>
+                    <a href="https://www.youtube.com/@ehsane" class="social-link">یوتیوب</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
