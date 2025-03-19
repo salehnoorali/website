@@ -92,7 +92,7 @@ body.dark-theme {
 .signup-btn {
     background: var(--accent-color);
     border: none;
-    color: var(--background-dark);
+    color: #000000;
 }
 
 /* Mobile Menu Button */
@@ -162,7 +162,7 @@ body.dark-theme {
     width: 100%;
     padding: 0.75rem;
     background: var(--primary-color);
-    color: white;
+    color: #000000;
     border: none;
     border-radius: 0.5rem;
     cursor: pointer;
@@ -346,7 +346,7 @@ body[dir="rtl"] .signal-details p {
     padding: 1rem 2rem;
     font-size: 1.1rem;
     background: var(--primary-color);
-    color: var(--background-dark);
+    color: #000000;
     border: none;
     border-radius: 0.5rem;
     cursor: pointer;
@@ -402,48 +402,52 @@ section h2 {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
-    z-index: 2000;
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
     transition: opacity 0.3s ease;
 }
 
+.modal.show {
+    opacity: 1;
+}
+
 .modal-content {
-    position: relative;
-    background-color: var(--background-light);
-    margin: 15% auto;
+    background-color: #1a1a1a;
     padding: 2rem;
+    border-radius: 8px;
     width: 90%;
     max-width: 500px;
-    border-radius: 1rem;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-    transform: translateY(-50px);
-    opacity: 0;
-    transition: transform 0.3s ease, opacity 0.3s ease;
+    position: relative;
+    color: white;
+    transform: translateY(-20px);
+    transition: transform 0.3s ease;
 }
 
 .modal.show .modal-content {
     transform: translateY(0);
-    opacity: 1;
 }
 
 .close-modal {
     position: absolute;
-    left: 1rem;
+    right: 1rem;
     top: 1rem;
     font-size: 1.5rem;
     cursor: pointer;
-    color: var(--text-secondary);
+    color: #888;
+    transition: color 0.3s ease;
 }
 
 .close-modal:hover {
-    color: var(--accent-color);
+    color: white;
 }
 
 /* Form Styles */
 .auth-form {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
-    margin-top: 1.5rem;
+    gap: 1rem;
 }
 
 .form-group {
@@ -453,54 +457,67 @@ section h2 {
 }
 
 .form-group label {
-    color: var(--text-secondary);
-    font-size: 0.9rem;
+    color: #888;
 }
 
 .form-group input {
-    padding: 0.75rem;
-    border-radius: 0.5rem;
-    border: 1px solid var(--text-secondary);
-    background-color: var(--background-dark);
-    color: var(--text-primary);
-    font-size: 1rem;
+    padding: 0.8rem;
+    border: 1px solid #333;
+    border-radius: 4px;
+    background-color: #222;
+    color: white;
+    transition: border-color 0.3s ease;
 }
 
 .form-group input:focus {
     outline: none;
-    border-color: var(--accent-color);
+    border-color: #007bff;
 }
 
 .submit-btn {
-    padding: 0.75rem;
-    background: var(--accent-color);
-    color: var(--text-primary);
+    padding: 1rem;
+    background-color: #007bff;
+    color: white;
     border: none;
-    border-radius: 0.5rem;
-    font-size: 1rem;
-    font-weight: 500;
+    border-radius: 4px;
     cursor: pointer;
-    transition: all 0.3s ease;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
 }
 
 .submit-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 2px 8px rgba(255, 255, 255, 0.3);
+    background-color: #0056b3;
 }
 
 .form-footer {
     text-align: center;
-    color: var(--text-secondary);
     margin-top: 1rem;
+    color: #888;
 }
 
 .form-footer a {
-    color: var(--accent-color);
+    color: #007bff;
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 .form-footer a:hover {
+    color: #0056b3;
     text-decoration: underline;
+}
+
+.logout-btn {
+    padding: 0.5rem 1rem;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 1rem;
+}
+
+.logout-btn:hover {
+    background-color: #c82333;
 }
 
 /* Market Widgets Container */
@@ -567,4 +584,322 @@ section h2 {
         margin: 10% auto;
         width: 95%;
     }
+}
+
+/* Community Section */
+.community-section {
+    padding: 4rem 2rem;
+    text-align: center;
+    background: var(--background-light);
+}
+
+.community-section h2 {
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+.community-section p {
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+}
+
+.community-section .cta-button {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    background: var(--primary-color);
+    color: #000000;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.community-section .cta-button:hover {
+    background: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+/* Forum Section */
+.forum-section {
+    padding: 4rem 2rem;
+    text-align: center;
+    background: var(--background-light);
+}
+
+.forum-section h2 {
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+.forum-section p {
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+}
+
+.forum-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.forum-form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.forum-form label {
+    color: var(--text-secondary);
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.forum-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--text-secondary);
+    background-color: var(--background-dark);
+    color: var(--text-primary);
+    font-size: 1rem;
+    resize: vertical;
+}
+
+.forum-form textarea:focus {
+    outline: none;
+    border-color: var(--accent-color);
+}
+
+.forum-form .submit-btn {
+    padding: 0.75rem 1.5rem;
+    background: var(--accent-color);
+    color: #000000;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.forum-form .submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(255, 255, 255, 0.3);
+}
+
+.comments-section {
+    margin-top: 2rem;
+}
+
+.comment {
+    background: var(--card-bg);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.comment-user {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-name {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.comment-date {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+}
+
+.comment-content {
+    color: var(--text-primary);
+    line-height: 1.6;
+}
+
+.comment-content p {
+    margin: 0;
+    white-space: pre-wrap;
+}
+
+.comment-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.action-button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    cursor: pointer;
+    font-size: 0.875rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.action-button:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-primary);
+}
+
+.login-message {
+    background: var(--card-bg);
+    color: var(--text-primary);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.comment-form-container {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+}
+
+.comment-form textarea {
+    width: 100%;
+    min-height: 100px;
+    background: var(--background-dark);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+    resize: vertical;
+}
+
+.comment-form textarea:focus {
+    outline: none;
+    border-color: var(--accent-color);
+}
+
+.comment-submit-btn {
+    background: var(--accent-color);
+    color: var(--background-dark);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.comment-submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(255, 255, 255, 0.2);
+}
+
+.comment-type {
+    font-size: 0.85rem;
+    color: var(--text-primary);
+    background: linear-gradient(135deg, #2563eb, #3b82f6);
+    padding: 0.35rem 0.75rem;
+    border-radius: 2rem;
+    margin: 0.25rem 0;
+    display: inline-block;
+    font-weight: 500;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.comment-type[data-type="experience"] {
+    background: linear-gradient(135deg, #059669, #10b981);
+}
+
+.comment-type[data-type="question"] {
+    background: linear-gradient(135deg, #7c3aed, #8b5cf6);
+}
+
+.comment-type[data-type="suggestion"] {
+    background: linear-gradient(135deg, #ea580c, #f97316);
+}
+
+.comment-type[data-type="feedback"] {
+    background: linear-gradient(135deg, #0284c7, #38bdf8);
+}
+
+.comment-type:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.comment-title {
+    font-size: 1.1rem;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.like-button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-secondary);
+    transition: all 0.3s ease;
+}
+
+.like-button:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: var(--text-primary);
+}
+
+.like-count {
+    font-weight: 600;
+}
+
+select {
+    padding: 0.8rem;
+    border: 1px solid #333;
+    border-radius: 4px;
+    background-color: #222;
+    color: white;
+    width: 100%;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+select:focus {
+    outline: none;
+    border-color: var(--accent-color);
+}
+
+select option {
+    background-color: #222;
+    color: white;
+    padding: 0.5rem;
 } 

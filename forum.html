@@ -23,13 +23,29 @@
         <section class="forum-section" style="margin-top: 2rem;">
             <h2>انجمن</h2>
             <p>تجربیات و نظرات خود را درباره بازار به اشتراک بگذارید.</p>
-            <form class="forum-form">
-                <div class="form-group">
-                    <label for="forumMessage">پیام شما</label>
-                    <textarea id="forumMessage" rows="5" required></textarea>
-                </div>
-                <button type="submit" class="submit-btn">ارسال</button>
-            </form>
+            <div class="forum-form-container">
+                <form class="forum-form">
+                    <div class="form-group">
+                        <label for="commentTitle">عنوان نظر</label>
+                        <input type="text" id="commentTitle" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="commentType">نوع نظر</label>
+                        <select id="commentType" required>
+                            <option value="">انتخاب کنید</option>
+                            <option value="experience">تجربه معاملاتی</option>
+                            <option value="question">سوال</option>
+                            <option value="suggestion">پیشنهاد</option>
+                            <option value="feedback">بازخورد</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="forumMessage">متن نظر</label>
+                        <textarea id="forumMessage" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">ارسال نظر</button>
+                </form>
+            </div>
         </section>
 
         <section class="comments-section">
