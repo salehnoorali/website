@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>گزارش هفتگی | احسان الیوت</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="main-header">
+        <nav class="nav-container">
+            <div class="logo">
+                <h1>احسان الیوت</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">خانه</a></li>
+                <li><a href="courses.html">دوره‌ها</a></li>
+                <li><a href="forex-news.html">اخبار فارکس</a></li>
+                <li><a href="reports.html" class="active">گزارش هفتگی</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <button class="login-btn">ورود</button>
+                <button class="signup-btn">ثبت نام</button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="reports-container">
+        <section class="reports-header">
+            <h1>گزارش‌های هفتگی</h1>
+            <p>تحلیل‌ها و گزارش‌های تخصصی بازارهای مالی</p>
+        </section>
+
+        <section class="reports-filters">
+            <div class="filter-group">
+                <label for="category-filter">دسته‌بندی:</label>
+                <select id="category-filter">
+                    <option value="all">همه</option>
+                    <option value="technical">تحلیل تکنیکال</option>
+                    <option value="fundamental">تحلیل فاندامنتال</option>
+                    <option value="news">اخبار و گزارش‌ها</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="date-filter">تاریخ:</label>
+                <select id="date-filter">
+                    <option value="week">این هفته</option>
+                    <option value="month">این ماه</option>
+                    <option value="all">همه</option>
+                </select>
+            </div>
+        </section>
+
+        <section class="reports-grid" id="reportsContainer">
+            <!-- Reports will be populated here via JavaScript -->
+        </section>
+
+        <section class="add-report-section" id="addReportSection" style="display: none;">
+            <h2>افزودن گزارش جدید</h2>
+            <form id="reportForm" class="report-form">
+                <div class="form-group">
+                    <label for="reportTitle">عنوان گزارش</label>
+                    <input type="text" id="reportTitle" required>
+                </div>
+                <div class="form-group">
+                    <label for="reportCategory">دسته‌بندی</label>
+                    <select id="reportCategory" required>
+                        <option value="technical">تحلیل تکنیکال</option>
+                        <option value="fundamental">تحلیل فاندامنتال</option>
+                        <option value="news">اخبار و گزارش‌ها</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="reportContent">متن گزارش</label>
+                    <textarea id="reportContent" rows="6" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="reportFiles">فایل‌های پیوست</label>
+                    <input type="file" id="reportFiles" multiple accept=".pdf,.jpg,.jpeg,.png,.doc,.docx">
+                </div>
+                <button type="submit" class="submit-btn">انتشار گزارش</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>درباره ما</h3>
+                <p>مرجع آموزش و تحلیل بازارهای مالی</p>
+            </div>
+            <div class="footer-section">
+                <h3>تماس با ما</h3>
+                <div class="social-links">
+                    <a href="#" class="social-link">اینستاگرام</a>
+                    <a href="#" class="social-link">تلگرام</a>
+                    <a href="#" class="social-link">توییتر</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="reports.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 

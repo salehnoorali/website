@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اخبار فارکس | احسان الیوت</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dark-theme">
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <button class="close-btn">&times;</button>
+            <h2>ورود به حساب کاربری</h2>
+            <form id="loginForm" class="auth-form">
+                <div class="form-group">
+                    <label for="loginEmail">ایمیل</label>
+                    <input type="email" id="loginEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">رمز عبور</label>
+                    <input type="password" id="loginPassword" required>
+                </div>
+                <div class="form-group remember-me">
+                    <label>
+                        <input type="checkbox" id="rememberMe">
+                        مرا به خاطر بسپار
+                    </label>
+                </div>
+                <div class="form-group">
+                    <button type="button" class="google-signin-btn">
+                        <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google">
+                        ورود با گوگل
+                    </button>
+                </div>
+                <button type="submit" class="submit-btn">ورود</button>
+                <div class="form-footer">
+                    <span>حساب کاربری ندارید؟</span>
+                    <a href="#" id="showSignup">ثبت نام کنید</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div id="signupModal" class="modal">
+        <div class="modal-content">
+            <button class="close-btn">&times;</button>
+            <h2>ثبت نام</h2>
+            <form id="signupForm" class="auth-form">
+                <div class="form-group">
+                    <label for="signupName">نام و نام خانوادگی</label>
+                    <input type="text" id="signupName" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupEmail">ایمیل</label>
+                    <input type="email" id="signupEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupPassword">رمز عبور</label>
+                    <input type="password" id="signupPassword" required>
+                </div>
+                <div class="form-group">
+                    <button type="button" class="google-signin-btn">
+                        <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google">
+                        ثبت‌نام با گوگل
+                    </button>
+                </div>
+                <button type="submit" class="submit-btn">ثبت نام</button>
+                <p class="form-footer">حساب کاربری دارید؟ <a href="#" id="showLogin">وارد شوید</a></p>
+            </form>
+        </div>
+    </div>
+
+    <header class="main-header">
+        <div class="header-banner">
+            <img src="assets/banner.jpg" alt="Ehsan Elliott Banner">
+        </div>
+        <nav class="nav-container">
+            <div class="logo">
+                <h1>احسان الیوت</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">خانه</a></li>
+                <li><a href="index.html#courses">دوره‌های آموزشی</a></li>
+                <li><a href="reports.html">گزارش هفتگی</a></li>
+                <li><a href="forex-news.html" class="active">اخبار فارکس</a></li>
+                <li><a href="forum.html">انجمن</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <button class="login-btn">ورود</button>
+                <button class="signup-btn">ثبت نام</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="forex-news-hero">
+            <div class="container">
+                <h1>اخبار و تقویم اقتصادی فارکس</h1>
+                <p>آخرین اخبار، رویدادها و تقویم اقتصادی بازارهای مالی جهانی</p>
+            </div>
+        </section>
+
+        <section class="forex-calendar-section">
+            <div class="container">
+                <h2 class="section-title">تقویم اقتصادی فارکس</h2>
+                <div class="forex-calendar-container">
+                    <iframe id="forexFactoryFrame" src="https://www.forexfactory.com/calendar?v=1&amp;week=today" width="100%" height="100%" frameborder="0" allowtransparency="true"></iframe>
+                    <div class="loading-indicator">
+                        <div class="spinner"></div>
+                        <p>در حال بارگذاری تقویم اقتصادی...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="forex-news-section">
+            <div class="container">
+                <h2 class="section-title">آخرین تحلیل‌های بازار</h2>
+                <div class="news-grid">
+                    <div class="news-card">
+                        <div class="news-date">۲۸ خرداد ۱۴۰۳</div>
+                        <h3 class="news-title">تحلیل هفتگی بازار ارز</h3>
+                        <p class="news-excerpt">تحلیل روند هفتگی ارزهای اصلی و پیش‌بینی بازار برای هفته آینده...</p>
+                        <div class="news-meta">
+                            <span class="news-author">احسان الیوت</span>
+                            <a href="#" class="news-link">ادامه مطلب</a>
+                        </div>
+                    </div>
+                    <div class="news-card">
+                        <div class="news-date">۲۵ خرداد ۱۴۰۳</div>
+                        <h3 class="news-title">تاثیر نرخ بهره بانک مرکزی آمریکا بر بازار ارز</h3>
+                        <p class="news-excerpt">بررسی تاثیر تصمیم فدرال رزرو بر روی جفت ارزهای اصلی و بازار جهانی...</p>
+                        <div class="news-meta">
+                            <span class="news-author">احسان الیوت</span>
+                            <a href="#" class="news-link">ادامه مطلب</a>
+                        </div>
+                    </div>
+                    <div class="news-card">
+                        <div class="news-date">۲۰ خرداد ۱۴۰۳</div>
+                        <h3 class="news-title">استراتژی معاملاتی بر اساس اخبار اقتصادی</h3>
+                        <p class="news-excerpt">چگونه از اخبار و رویدادهای اقتصادی برای تصمیم‌گیری معاملاتی استفاده کنیم...</p>
+                        <div class="news-meta">
+                            <span class="news-author">احسان الیوت</span>
+                            <a href="#" class="news-link">ادامه مطلب</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="economic-indicators">
+            <div class="container">
+                <h2 class="section-title">شاخص‌های اقتصادی تاثیرگذار</h2>
+                <div class="indicators-grid">
+                    <div class="indicator-card">
+                        <h3>نرخ بهره</h3>
+                        <p>تغییرات نرخ بهره یکی از مهم‌ترین رویدادهای تاثیرگذار بر بازار ارز است. بانک‌های مرکزی کشورهای مختلف با تغییر نرخ بهره، سیاست‌های پولی خود را اعمال می‌کنند.</p>
+                    </div>
+                    <div class="indicator-card">
+                        <h3>اشتغال</h3>
+                        <p>گزارش‌های اشتغال مانند NFP در آمریکا، نشان‌دهنده وضعیت اقتصادی کشور است و تاثیر قابل توجهی بر ارزش ارز آن کشور دارد.</p>
+                    </div>
+                    <div class="indicator-card">
+                        <h3>تورم</h3>
+                        <p>شاخص‌های قیمت مصرف‌کننده (CPI) و قیمت تولیدکننده (PPI) نشان‌دهنده سطح تورم در اقتصاد هستند و بر سیاست‌های پولی تاثیر می‌گذارند.</p>
+                    </div>
+                    <div class="indicator-card">
+                        <h3>تولید ناخالص داخلی (GDP)</h3>
+                        <p>شاخص GDP نشان‌دهنده رشد اقتصادی کشور است و تاثیر مستقیمی بر ارزش ارز آن دارد.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>درباره ما</h3>
+                <p>احسان الیوت - متخصص و مدرس بازارهای مالی</p>
+            </div>
+            <div class="footer-section">
+                <h3>تماس با ما</h3>
+                <p>ایمیل: info@ehsaneliott.com</p>
+            </div>
+            <div class="footer-section">
+                <h3>شبکه‌های اجتماعی</h3>
+                <div class="social-links">
+                    <a href="https://instagram.com/ehsanelliott?igshid=NTR5dW81MXYxY3Y5" class="social-link">اینستاگرام</a>
+                    <a href="https://t.me/ehsanelliott" class="social-link">تلگرام</a>
+                    <a href="https://www.youtube.com/@ehsanelliott" class="social-link">یوتیوب</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Forex Factory Calendar Management
+        document.addEventListener('DOMContentLoaded', function() {
+            const forexFrame = document.getElementById('forexFactoryFrame');
+            const loadingIndicator = document.querySelector('.loading-indicator');
+            
+            if (forexFrame && loadingIndicator) {
+                // Show loading indicator
+                loadingIndicator.style.display = 'flex';
+                
+                // Hide loading indicator when iframe is loaded
+                forexFrame.addEventListener('load', function() {
+                    loadingIndicator.style.display = 'none';
+                    console.log('Forex Factory calendar loaded successfully');
+                });
+                
+                // Handle potential loading errors
+                forexFrame.addEventListener('error', function() {
+                    loadingIndicator.innerHTML = `
+                        <div class="calendar-error">
+                            <h3>خطا در بارگذاری تقویم</h3>
+                            <p>متأسفانه مشکلی در بارگذاری تقویم اقتصادی رخ داده است.</p>
+                            <a href="https://www.forexfactory.com/calendar" target="_blank" class="forex-link">
+                                مشاهده تقویم در سایت Forex Factory
+                            </a>
+                        </div>
+                    `;
+                    console.error('Error loading Forex Factory calendar');
+                });
+                
+                // Try to reload iframe if it fails to load after 10 seconds
+                setTimeout(function() {
+                    if (loadingIndicator.style.display !== 'none') {
+                        console.log('Trying to reload Forex Factory calendar');
+                        forexFrame.src = forexFrame.src;
+                    }
+                }, 10000);
+            }
+        });
+    </script>
+    <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+    <script src="script.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-auth-compat.js"></script>
+</body>
+</html> 

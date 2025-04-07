@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>پنل مدیریت | احسان الیوت</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dark-theme">
+    <header class="main-header">
+        <nav class="nav-container">
+            <div class="logo">
+                <h1>پنل مدیریت</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">بازگشت به سایت</a></li>
+                <li><a href="#" id="logoutBtn">خروج</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main style="padding-top: 80px;">
+        <div class="dashboard-container">
+            <div class="dashboard-sidebar">
+                <div class="user-info">
+                    <img id="userAvatar" src="" alt="avatar" class="user-avatar">
+                    <div>
+                        <h3 id="userName">نام کاربر</h3>
+                        <span id="userRole" class="user-role">نقش</span>
+                    </div>
+                </div>
+                <nav class="dashboard-nav">
+                    <button class="nav-item active" data-section="courses">مدیریت دوره‌ها</button>
+                    <button class="nav-item" data-section="blogs">مدیریت مقالات</button>
+                    <button class="nav-item" data-section="users">مدیریت کاربران</button>
+                </nav>
+            </div>
+
+            <div class="dashboard-content">
+                <!-- Courses Section -->
+                <section id="coursesSection" class="dashboard-section active">
+                    <h2>مدیریت دوره‌ها</h2>
+                    <button class="add-btn" id="addCourseBtn">افزودن دوره جدید</button>
+                    <div class="courses-grid">
+                        <!-- Courses will be listed here -->
+                    </div>
+                </section>
+
+                <!-- Blogs Section -->
+                <section id="blogsSection" class="dashboard-section">
+                    <h2>مدیریت مقالات</h2>
+                    <button class="add-btn" id="addBlogBtn">نوشتن مقاله جدید</button>
+                    <div class="blogs-list">
+                        <!-- Blogs will be listed here -->
+                    </div>
+                </section>
+
+                <!-- Users Section -->
+                <section id="usersSection" class="dashboard-section">
+                    <h2>مدیریت کاربران</h2>
+                    <div class="users-list">
+                        <!-- Users will be listed here -->
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <!-- Add Course Modal -->
+        <div id="addCourseModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h2>افزودن دوره جدید</h2>
+                <form id="addCourseForm" class="dashboard-form">
+                    <div class="form-group">
+                        <label for="courseTitle">عنوان دوره</label>
+                        <input type="text" id="courseTitle" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="courseDescription">توضیحات دوره</label>
+                        <textarea id="courseDescription" rows="4" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="courseImage">تصویر دوره</label>
+                        <input type="file" id="courseImage" accept="image/*" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="courseVideo">ویدیو دوره</label>
+                        <input type="file" id="courseVideo" accept="video/*" required>
+                    </div>
+                    <button type="submit" class="submit-btn">افزودن دوره</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Add Blog Modal -->
+        <div id="addBlogModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h2>نوشتن مقاله جدید</h2>
+                <form id="addBlogForm" class="dashboard-form">
+                    <div class="form-group">
+                        <label for="blogTitle">عنوان مقاله</label>
+                        <input type="text" id="blogTitle" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="blogContent">متن مقاله</label>
+                        <textarea id="blogContent" rows="10" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="blogImage">تصویر شاخص</label>
+                        <input type="file" id="blogImage" accept="image/*" required>
+                    </div>
+                    <button type="submit" class="submit-btn">انتشار مقاله</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script src="dashboard.js"></script>
+</body>
+</html> 
